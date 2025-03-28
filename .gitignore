@@ -26,8 +26,6 @@ venv/
 ENV/
 env/
 
-# Fichiers d'environnement
-.env
 
 # Fichiers de log
 *.log
