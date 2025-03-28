@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Temporaire - Gmail Dot Trick</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Email Temporaire Gmail</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="email-box">
+            <h2>Votre adresse email temporaire</h2>
+            <div class="email-address">
+                <span id="email-address">Générez une adresse email temporaire</span>
+                <button id="copy-email">Copier</button>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active" id="normal-tab">Emails Temporaires</button>
+                <button class="tab-btn" id="relayed-tab">Emails Relayés</button>
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" id="generate-dot">Générer Email #1</button>
+                <button class="btn btn-primary" id="generate-dotplus">Générer Email #2</button>
+                <button class="btn btn-secondary" id="refresh-inbox">Rafraîchir</button>
+                <a href="/relay" class="btn btn-secondary">Service de Relais</a>
+            </div>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Rechercher dans les messages...">
+        </div>
+        
+        <div class="inbox">
+            <div id="loading" class="loading hidden">
+                <span></span>
+                <p>Chargement...</p>
+            </div>
+            
+            <div id="no-messages" class="no-messages">
+                Aucun message pour le moment.
+            </div>
+            
+            <ul id="messages-list" class="message-list hidden">
+                <!-- Les messages seront ajoutés ici dynamiquement -->
+            </ul>
+        </div>
+        
+        <div id="message-view" class="message-view hidden">
+            <!-- Le contenu du message sera affiché ici -->
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Gmail Temporary Email - Un service basé sur le Gmail Dot Trick</p>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

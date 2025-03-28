@@ -1,0 +1,5 @@
+python-dotenv
+Flask
+Flask-Limiter
+imap-tools
+requests
